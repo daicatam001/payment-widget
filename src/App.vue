@@ -43,9 +43,8 @@ export default {
   margin: 0;
 }
 
-html,
 body {
-  height: 100%;
+  min-height: 100%;
   padding: 30px 0;
   font-family: var(--ff);
   font-size: var(--fs-base);
@@ -54,7 +53,7 @@ body {
 :root {
   --ff: "Montserrat", sans-serif;
 
-  --fs-base: 12px;
+  --fs-base: 14px;
 
   --fw-medium: 500;
   --fw-bold: 600;
@@ -65,8 +64,10 @@ body {
   --clr-accent: #2af5d6;
 
   --border-clr: #f2f7ff;
+  --border-clr-hover: #2AF5D6;
   --bs-frame: 0px 0px 24px rgba(8, 21, 30, 0.2);
   --bs-card: 0px 5px 12px rgba(57, 40, 71, 0.2);
+  --bs-card-active: 0px 5px 12px rgba(42, 245, 214, 0.4);
   --radius-base: 4px;
   --radius-frame: 8px;
 
