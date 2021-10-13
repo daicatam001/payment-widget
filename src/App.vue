@@ -1,8 +1,13 @@
 <template>
   <Header />
   <main id="main">
-    <PayTo />
-    <Line/>
+    <div class="payment-method">
+      <PayTo />
+      <Line />
+    </div>
+    <div class="order-wrapper">
+      <Order />
+    </div>
   </main>
   <Footer />
 </template>
@@ -12,12 +17,14 @@ import Header from "@/components/layout/Header.vue";
 import Footer from "@/components/layout/Footer.vue";
 import Line from "@/components/ui/Line.vue";
 import PayTo from "@/components/PayTo.vue";
+import Order from "./components/Order.vue";
 export default {
   components: {
     Header,
     Footer,
     PayTo,
-    Line
+    Line,
+    Order,
   },
 };
 </script>
@@ -60,7 +67,7 @@ body {
   --radius-frame: 8px;
 
   --blue-900: #111052;
-  --blue-500: #1169FF;
+  --blue-500: #1169ff;
   --blue-300: #538fff;
 }
 
@@ -75,6 +82,14 @@ body {
   overflow: hidden;
 }
 main {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.payment-method,
+.order-wrapper {
   padding: 20px;
+}
+.order-wrapper {
+  width: 265px;
 }
 </style>
