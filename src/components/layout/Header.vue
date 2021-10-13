@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <header class="header">
     <div class="left">
       <div class="wrapper">
         <div class="branch">
@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
