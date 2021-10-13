@@ -1,12 +1,16 @@
 <template>
   <Header />
+  <main class="main">xsxs</main>
+  <Footer />
 </template>
 
 <script>
 import Header from "@/components/layout/Header.vue";
+import Footer from "@/components/layout/Footer.vue";
 export default {
   components: {
     Header,
+    Footer,
   },
 };
 </script>
@@ -25,6 +29,7 @@ export default {
 html,
 body {
   height: 100%;
+  padding: 30px 0;
   font-family: var(--ff);
   font-size: var(--fs-base);
 }
@@ -34,6 +39,7 @@ body {
 
   --fs-base: 12px;
 
+  --fw-medium: 500;
   --fw-bold: 600;
 
   --clr-light: #fff;
@@ -44,15 +50,20 @@ body {
   --bs-frame: 0px 0px 24px rgba(8, 21, 30, 0.2);
   --bs-card: 0px 5px 12px rgba(57, 40, 71, 0.2);
   --radius-base: 4px;
+  --radius-frame: 8px;
 
   --blue-900: #111052;
+  --blue-300: #538fff;
 }
 
 #app {
-  max-width: 931px;
+  max-width: 930px;
   margin: 0 auto;
+  height: 100%;
   box-shadow: var(--bs-frame);
-  border-radius: var(--radius-base);
+  border-radius: var(--radius-frame);
   display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
 }
 </style>
