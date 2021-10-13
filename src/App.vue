@@ -1,7 +1,5 @@
 <template>
-  <div class="app">
-    <Header />
-  </div>
+  <Header />
 </template>
 
 <script>
@@ -20,6 +18,15 @@ export default {
 *::after,
 *::before {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--ff);
+  font-size: var(--fs-base);
 }
 
 :root {
@@ -27,23 +34,25 @@ export default {
 
   --fs-base: 12px;
 
-  --ss-bg: #111052;
-
   --fw-bold: 600;
 
   --clr-light: #fff;
   --clr-dark: #070c11;
-  --color-accent: #2af5d6;
+  --clr-accent: #2af5d6;
 
   --border-clr: #f2f7ff;
   --bs-frame: 0px 0px 24px rgba(8, 21, 30, 0.2);
   --bs-card: 0px 5px 12px rgba(57, 40, 71, 0.2);
   --radius-base: 4px;
+
+  --blue-900: #111052;
 }
 
-.app {
+#app {
   max-width: 931px;
   margin: 0 auto;
   box-shadow: var(--bs-frame);
+  border-radius: var(--radius-base);
+  display: grid;
 }
 </style>
