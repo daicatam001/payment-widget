@@ -40,13 +40,13 @@ export default {
     font-weight: var(--fw-bold);
 }
 .line-1{
-    font-size: 14px;
+    font-size: var(--heading-4);
     line-height: 12px;
     margin-bottom: 3px;
     font-weight: var(--fw-bold);
 }
 .line-2{
-    font-size: 12px;
+    font-size: var(--heading-5);
     line-height: 18px;
     margin-bottom: 3px;
     display: flex;

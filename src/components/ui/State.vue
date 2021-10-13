@@ -17,7 +17,7 @@ export default {};
   gap: 10px;
 }
 .text {
-  font-size: 12px;
+  font-size: var(--heading-5);
   line-height: 16px;
 }
 </style>

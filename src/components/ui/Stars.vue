@@ -36,7 +36,7 @@ export default {
   gap: 10px;
 }
 .number{
-    font-size: 12px;
+    font-size: var(--heading-5);
     font-weight: var(--fw-bold);
 }
 </style>

@@ -4,6 +4,7 @@
     <div class="payment-method">
       <PayTo />
       <Line />
+      <Account />
     </div>
     <div class="order-wrapper">
       <Order />
@@ -18,6 +19,7 @@ import Footer from "@/components/layout/Footer.vue";
 import Line from "@/components/ui/Line.vue";
 import PayTo from "@/components/PayTo.vue";
 import Order from "./components/Order.vue";
+import Account from "./components/Account.vue";
 export default {
   components: {
     Header,
@@ -25,6 +27,7 @@ export default {
     PayTo,
     Line,
     Order,
+    Account,
   },
 };
 </script>
@@ -58,6 +61,7 @@ body {
 
   --clr-light: #fff;
   --clr-dark: #070c11;
+  --clr-gray: #455a64;
   --clr-accent: #2af5d6;
 
   --border-clr: #f2f7ff;
@@ -69,6 +73,12 @@ body {
   --blue-900: #111052;
   --blue-500: #1169ff;
   --blue-300: #538fff;
+
+  --heading-1: 21px;
+  --heading-2: 20px;
+  --heading-3: 16px;
+  --heading-4: 14px;
+  --heading-5: 12px;
 }
 
 #app {

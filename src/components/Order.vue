@@ -34,18 +34,18 @@ export default {
 <style lang="scss" scoped>
 .order-name {
   font-weight: 600;
-  font-size: 16px;
+  font-size: var(--heading-3);
   line-height: 20px;
 }
 .product-name {
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--heading-3);
   line-height: 22px;
 }
 ul {
   li {
     list-style: none;
-    font-size: 14px;
+    font-size: var(--heading-4);
     display: flex;
     justify-content: space-between;
     &:not(:last-child) {
@@ -56,11 +56,11 @@ ul {
 .total {
   text-align: right;
   .label {
-    font-size: 16px;
+    font-size: var(--heading-3);
     margin-bottom: 10px;
   }
   .price {
-    font-size: 16px;
+    font-size: var(--heading-3);
     font-weight: var(--fw-bold);
     line-height: 20px;
   }
