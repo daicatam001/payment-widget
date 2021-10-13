@@ -8,6 +8,7 @@
     </div>
     <div class="order-wrapper">
       <Order />
+      <Scan />
     </div>
   </main>
   <Footer />
@@ -20,6 +21,7 @@ import Line from "@/components/ui/Line.vue";
 import PayTo from "@/components/PayTo.vue";
 import Order from "./components/Order.vue";
 import Account from "./components/Account.vue";
+import Scan from "./components/Scan.vue";
 export default {
   components: {
     Header,
@@ -28,6 +30,7 @@ export default {
     Line,
     Order,
     Account,
+    Scan,
   },
 };
 </script>
@@ -62,9 +65,9 @@ body {
   --clr-dark: #070c11;
   --clr-gray: #455a64;
   --clr-accent: #2af5d6;
+  --clr-accent-light: #5fffe6;
 
   --border-clr: #f2f7ff;
-  --border-clr-hover: #2AF5D6;
   --bs-frame: 0px 0px 24px rgba(8, 21, 30, 0.2);
   --bs-card: 0px 5px 12px rgba(57, 40, 71, 0.2);
   --bs-card-active: 0px 5px 12px rgba(42, 245, 214, 0.4);
@@ -72,6 +75,7 @@ body {
   --radius-frame: 8px;
 
   --blue-900: #111052;
+  --blue-600: #1e41ff;
   --blue-500: #1169ff;
   --blue-300: #538fff;
 
@@ -102,5 +106,21 @@ main {
 }
 .order-wrapper {
   width: 265px;
+}
+
+.btn-primary {
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  outline: 0;
+  border: 1px solid var(--clr-accent);
+  border-radius: var(--radius-base);
+  &:hover {
+    background-color: var(--clr-accent-light);
+  }
+}
+.order-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 </style>

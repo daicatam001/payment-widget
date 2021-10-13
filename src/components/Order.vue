@@ -45,7 +45,7 @@ export default {
 ul {
   li {
     list-style: none;
-    font-size: var(--heading-4);
+    font-size: 14px;
     display: flex;
     justify-content: space-between;
     &:not(:last-child) {

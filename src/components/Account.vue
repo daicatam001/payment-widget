@@ -58,6 +58,13 @@
         </div>
       </Card>
     </div>
+    <div class="place-order">
+      <button class="btn-primary btn-place-order">Top Up Account</button>
+      <div class="policy-term">
+        By paying you agree to FasterPay’s <a href="#">Terms of Service</a> and
+        <a href="#">Privacy Policy</a>.
+      </div>
+    </div>
   </div>
 </template>
 
@@ -120,5 +127,23 @@ export default {
   height: 100%;
   display: flex;
   align-items: center;
+}
+.btn-place-order {
+  width: 340px;
+  height: 48px;
+  line-height: 48px;
+  font-weight: var(--fw-bold);
+  text-align: center;
+  font-size: var(--heading-3);
+}
+.policy-term {
+  width: 340px;
+  line-height: 20px;
+  margin-top: 10px;
+  font-size: var(--heading-5);
+  color: var(--clr-dark);
+  a {
+    color: inherit;
+  }
 }
 </style>
