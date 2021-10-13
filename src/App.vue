@@ -1,16 +1,23 @@
 <template>
   <Header />
-  <main class="main">xsxs</main>
+  <main id="main">
+    <PayTo />
+    <Line/>
+  </main>
   <Footer />
 </template>
 
 <script>
 import Header from "@/components/layout/Header.vue";
 import Footer from "@/components/layout/Footer.vue";
+import Line from "@/components/ui/Line.vue";
+import PayTo from "@/components/PayTo.vue";
 export default {
   components: {
     Header,
     Footer,
+    PayTo,
+    Line
   },
 };
 </script>
@@ -53,6 +60,7 @@ body {
   --radius-frame: 8px;
 
   --blue-900: #111052;
+  --blue-500: #1169FF;
   --blue-300: #538fff;
 }
 
@@ -65,5 +73,8 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   overflow: hidden;
+}
+main {
+  padding: 20px;
 }
 </style>

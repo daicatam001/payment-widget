@@ -1,0 +1,42 @@
+<template>
+  <div class="stars">
+    <div class="start-group">
+      <span v-for="n in startCount" :key="n">
+        <img src="@/assets/images/star.png" />
+      </span>
+      <span v-if="hasHalfStar">
+        <img src="@/assets/images/half-star.png" />
+      </span>
+    </div>
+    <img src="@/assets/images/chevron-down.svg" />
+    <div class="number">
+      <span>{{ star }}</span>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: ["star"],
+  computed: {
+    startCount() {
+      return parseInt(this.star);
+    },
+    hasHalfStar() {
+      console.log(this.startCount != this.star);
+      return this.startCount != this.star;
+    },
+  },
+};
+</script>
+
+<style scoped>
+.stars {
+  display: flex;
+  gap: 10px;
+}
+.number{
+    font-size: 12px;
+    font-weight: var(--fw-bold);
+}
+</style>
