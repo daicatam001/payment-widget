@@ -39,5 +39,4 @@ export default createStore({
       return balance;
     },
   },
-  plugins: [createLogger()],
 });
