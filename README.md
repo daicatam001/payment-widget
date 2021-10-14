@@ -8,7 +8,7 @@ Project was created to build a payment widget
 
 Project was deployed to Firebase
 
-Check out live demo here -> https://up-trail.web.app/
+Check out live demo here -> [demo][demo]
 
 ## Tech stack
 
@@ -40,6 +40,7 @@ I spent like more that 10 hours to do this project. I also did it at work (after
  - run `npm run serve` to start the project
 
 [screen-shot]:docs/screenshot.png
+[demo]:https://payment-widget-3b9d4.web.app/
 [vue]:https://vuejs.org/
 [vuex]:https://vuex.vuejs.org/guide/
 [time]:docs/time.png
