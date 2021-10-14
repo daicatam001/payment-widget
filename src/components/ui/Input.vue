@@ -1,6 +1,7 @@
 <template>
-  <div class="ta-input">
-    <input type="text" />
+{{isEmpty}}
+  <div class="ta-input" :class="{ 'is-empty': isEmpty }">
+    <input ref="input" type="number" :value="value" />
     <label> {{ label }}</label>
     <span class="suffix" v-if="suffix">{{ suffix }}</span>
   </div>
@@ -8,7 +9,12 @@
 
 <script>
 export default {
-  props: ["label", "suffix"],
+  props: ["label", "suffix", "value"],
+  computed: {
+    isEmpty() {
+      return this.$refs.input && !!this.$refs.input.value.trim();
+    },
+  },
 };
 </script>
 
@@ -38,14 +44,27 @@ input:focus ~ label {
   font-size: 12px;
   transform: translateY(calc(-50% - 14px));
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 label {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+
   left: 16px;
   display: block;
-  font-size: 16px;
+
   color: #68879a;
+  font-size: 12px;
+  transform: translateY(calc(-50% - 14px));
   transition-property: transform, width;
   transition-duration: 0.2s, 0.2s;
   transition-timing-function: ease-out;
@@ -57,5 +76,10 @@ label {
   top: 50%;
   transform: translateY(-50%);
   right: 16px;
+}
+
+.ta-input.is-empty label {
+  font-size: 16px;
+  transform: translateY(-50%);
 }
 </style>

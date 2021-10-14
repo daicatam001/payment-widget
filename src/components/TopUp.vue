@@ -16,12 +16,12 @@
         </div>
       </div>
       <div class="content">
-        <Input label="Top Up amount" suffix="EUR" />
+        <Input label="Top Up amount" suffix="EUR" :value="topUpAmount" @update="updateTopUpAmount" />
         <div class="badge-list">
-          <AmountBadge currency="€" amount="50.00" :active="true" />
-          <AmountBadge currency="€" amount="100.00" />
-          <AmountBadge currency="€" amount="150.00" />
-          <AmountBadge currency="€" amount="200.00" />
+          <AmountBadge currency="€" :amount="50" :active="topUpAmount == 50" />
+          <AmountBadge currency="€" :amount="100" :active="topUpAmount == 100" />
+          <AmountBadge currency="€" :amount="150" :active="topUpAmount == 150"/>
+          <AmountBadge currency="€" :amount="200" :active="topUpAmount == 200"/>
         </div>
       </div>
     </div>
@@ -68,11 +68,21 @@
         </div>
       </div>
     </div>
+    <div class="top-up">
+      <button class="btn-primary btn-big" @click="toTopUp">
+        Top Up Account
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  computed:{
+    topUpAmount(){
+      return this.$store.getters['payment/topUpAmount']
+    }
+  }
 };
 </script>
 

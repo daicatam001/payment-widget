@@ -194,6 +194,15 @@ main {
   }
 }
 
+.btn-big {
+  width: 340px;
+  height: 48px;
+  line-height: 48px;
+  font-weight: var(--fw-bold);
+  text-align: center;
+  font-size: var(--heading-3);
+}
+
 .back-link {
   color: var(--blue-500);
   font-size: var(--heading-5);

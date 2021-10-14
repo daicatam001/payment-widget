@@ -101,13 +101,15 @@
       </div>
     </div>
     <div class="top-up" v-else>
-      <button class="btn-primary btn-big">Top Up Account</button>
+      <button class="btn-primary btn-big" @click="toTopUp">
+        Top Up Account
+      </button>
     </div>
   </div>
 </template>
 
 <script>
-import { PAYMENT_TYPE, PAYMENT_BY } from "@/constants";
+import { PAYMENT_TYPE, PAYMENT_BY, STEP } from "@/constants";
 export default {
   computed: {
     balance() {
@@ -144,6 +146,9 @@ export default {
     payDirect() {
       this.$store.dispatch("payDirectly");
     },
+    toTopUp() {
+      this.$store.dispatch("setStep", STEP.TOP_UP);
+    },
   },
 };
 </script>
@@ -158,15 +163,6 @@ export default {
 
 .account-card-list {
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-}
-
-.btn-big {
-  width: 340px;
-  height: 48px;
-  line-height: 48px;
-  font-weight: var(--fw-bold);
-  text-align: center;
-  font-size: var(--heading-3);
 }
 .policy-form {
   width: 340px;

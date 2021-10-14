@@ -5,6 +5,7 @@ import { AppState } from "..";
 export interface PaymentState {
   paymentType: PAYMENT_TYPE;
   paymentBy: PAYMENT_BY | null;
+  topUpAmount: number | null;
 }
 
 export default {
@@ -12,6 +13,7 @@ export default {
   state: {
     paymentType: PAYMENT_TYPE.DIRECT,
     paymentBy: null,
+    topUpAmount: 50,
   },
   actions: {
     togglePaymentType({
@@ -48,6 +50,9 @@ export default {
     },
     paymentBy({ paymentBy }: PaymentState) {
       return paymentBy;
+    },
+    topUpAmount({ topUpAmount }: PaymentState) {
+      return topUpAmount;
     },
   },
 };
