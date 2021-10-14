@@ -21,6 +21,10 @@ export default createStore({
     setStep({ commit }, payload: STEP): void {
       commit("setStep", payload);
     },
+    payDirectly({ commit, dispatch }): void {
+      dispatch("payment/setPaymentBy", null);
+      commit("setStep", STEP.SUCCESS);
+    },
   },
   mutations: {
     setStep(state: AppState, payload: STEP): void {
@@ -35,5 +39,5 @@ export default createStore({
       return balance;
     },
   },
-  plugins:[createLogger()]
+  plugins: [createLogger()],
 });

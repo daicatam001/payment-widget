@@ -10,7 +10,7 @@
     </div>
     <div class="order-wrapper">
       <Order />
-      <Scan />
+      <Scan v-if="!isSuccess" />
     </div>
   </main>
   <Footer />
@@ -38,6 +38,9 @@ export default {
     Success,
   },
   computed: {
+    isSuccess() {
+      return this.step === STEP.SUCCESS;
+    },
     step() {
       return this.$store.getters.step;
     },

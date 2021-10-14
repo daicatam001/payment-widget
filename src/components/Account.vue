@@ -87,7 +87,11 @@
       </Card>
     </div>
     <div class="place-order" v-if="isDirect">
-      <button class="btn-primary btn-big" :disabled="!paymentBy">
+      <button
+        class="btn-primary btn-big"
+        :disabled="!paymentBy"
+        @click="payDirect"
+      >
         <img src="@/assets/images/lock.svg" />
         Pay {{ $filters.toCurrency(totalOrderAmount) }} {{ currency }}
       </button>
@@ -136,6 +140,9 @@ export default {
     },
     setPaymentBy(by) {
       this.$store.dispatch("payment/setPaymentBy", by);
+    },
+    payDirect() {
+      this.$store.dispatch("payDirectly");
     },
   },
 };

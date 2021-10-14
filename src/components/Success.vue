@@ -16,7 +16,7 @@
       </div>
       <div class="action">
         <button class="btn-primary btn-download">Download receipt</button>
-        <div class="back back-link">Back to merchant</div>
+        <div class="back back-link" @click="toMerchant">Back to merchant</div>
         <div class="paragrah">
           Any questions? Please contact our <a href="#">Support Center</a>
         </div>
@@ -26,7 +26,14 @@
 </template>
 
 <script>
-export default {};
+import { STEP } from "@/constants";
+export default {
+  methods: {
+    toMerchant() {
+      this.$store.dispatch("setStep", STEP.ACCOUNT);
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
