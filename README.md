@@ -1,24 +1,46 @@
-# payment-widget
+# Payment Widget by Vue
 
-## Project setup
-```
-npm install
-```
+Project was created to build a payment widget
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![Screen Shot][screen-shot]
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Demo
 
-### Lints and fixes files
-```
-npm run lint
-```
+Project was deployed to Firebase
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Check out live demo here -> https://up-trail.web.app/
+
+## Tech stack
+
+- [Vue][vue]
+- [Vuex][vuex]
+
+
+
+## Chanllenges
+
+ - The biggest challenge of this test was to complete it in time.  It's working days so there're not much time left for me to do the task.
+ - The second challenge was understanding the flow those pages, I should ask again about it so I took me a lot of time to organize data and it's not done yet
+ 
+
+## Time tracking
+
+![time][time]
+  
+
+![files][files]
+
+I spent like more that 10 hours to do this project. I also did it at work (after lunch and before I got off work) where I forgot to install waka time so the time tracking was not really precise
+
+
+## Local developement
+
+ - Clone project
+ - run `npm install` to install dependencies
+ - run `npm run serve` to start the project
+
+[screen-shot]:docs/screenshot.png
+[vue]:https://vuejs.org/
+[vuex]:https://vuex.vuejs.org/guide/
+[time]:docs/time.png
+[files]:docs/files.png
