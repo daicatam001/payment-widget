@@ -1,6 +1,6 @@
 <template>
   <div class="topup">
-    <div class="back">
+    <div class="back back-link">
       <img src="@/assets/images/chevron-back.svg" />
       <span> Choose another payment method</span>
     </div>
@@ -78,10 +78,6 @@ export default {
 
 <style lang="scss" scoped>
 .back {
-  color: var(--blue-500);
-  font-size: var(--heading-5);
-  font-weight: var(--fw-bold);
-  cursor: pointer;
   margin-bottom: 10px;
 }
 .topup-header {

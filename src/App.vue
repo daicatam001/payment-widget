@@ -4,6 +4,8 @@
     <div class="payment-method">
       <PayTo />
       <Line />
+      <Success />
+      <Line />
       <TopUp />
       <Line />
       <Account />
@@ -19,22 +21,22 @@
 <script>
 import Header from "@/components/layout/Header.vue";
 import Footer from "@/components/layout/Footer.vue";
-import Line from "@/components/ui/Line.vue";
 import PayTo from "@/components/PayTo.vue";
 import Order from "./components/Order.vue";
 import Account from "./components/Account.vue";
 import TopUp from "./components/TopUp.vue";
 import Scan from "./components/Scan.vue";
+import Success from "./components/Success.vue";
 export default {
   components: {
     Header,
     Footer,
     PayTo,
-    Line,
     Order,
     Account,
     TopUp,
     Scan,
+    Success,
   },
 };
 </script>
@@ -157,5 +159,23 @@ main {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+}
+
+.paragrah {
+  width: 340px;
+  line-height: 20px;
+  margin-top: 10px;
+  font-size: var(--heading-5);
+  color: var(--clr-dark);
+  a {
+    color: inherit;
+  }
+}
+
+.back-link {
+  color: var(--blue-500);
+  font-size: var(--heading-5);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
 }
 </style>
