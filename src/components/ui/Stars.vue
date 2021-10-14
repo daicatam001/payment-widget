@@ -15,15 +15,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   props: ["star"],
   computed: {
-    startCount() {
+    startCount(): number {
       return parseInt(this.star);
     },
-    hasHalfStar() {
-      console.log(this.startCount != this.star);
+    hasHalfStar(): boolean {
       return this.startCount != this.star;
     },
   },
@@ -35,8 +34,8 @@ export default {
   display: flex;
   gap: 10px;
 }
-.number{
-    font-size: var(--heading-5);
-    font-weight: var(--fw-bold);
+.number {
+  font-size: var(--heading-5);
+  font-weight: var(--fw-bold);
 }
 </style>

@@ -4,6 +4,7 @@
     <div class="payment-method">
       <PayTo />
       <Line />
+      <TopUp />
       <Account />
     </div>
     <div class="order-wrapper">
@@ -21,6 +22,7 @@ import Line from "@/components/ui/Line.vue";
 import PayTo from "@/components/PayTo.vue";
 import Order from "./components/Order.vue";
 import Account from "./components/Account.vue";
+import TopUp from "./components/TopUp.vue";
 import Scan from "./components/Scan.vue";
 export default {
   components: {
@@ -30,6 +32,7 @@ export default {
     Line,
     Order,
     Account,
+    TopUp,
     Scan,
   },
 };
@@ -122,5 +125,24 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.heading-1 {
+  font-size: var(--heading-1);
+  font-weight: var(--fw-bold);
+}
+.heading-2 {
+  font-size: var(--heading-2);
+  font-weight: var(--fw-bold);
+}
+.heading-3 {
+  font-size: var(--heading-3);
+  font-weight: var(--fw-bold);
+}
+
+.sub-heading {
+  font-size: var(--heading-5);
+  font-weight: var(--fw-medium);
+  color: var(--clr-gray);
 }
 </style>
