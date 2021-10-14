@@ -1,6 +1,9 @@
 <template>
   <div class="topup">
-    <div class="back">Choose another payment method</div>
+    <div class="back">
+      <img src="@/assets/images/chevron-back.svg" />
+      <span> Choose another payment method</span>
+    </div>
     <div class="heading-1 topup-header">Top up My FasterPay Account</div>
     <div class="choose-top-up-amount">
       <div class="head">
@@ -22,6 +25,49 @@
         </div>
       </div>
     </div>
+
+    <div class="choose-payment-method">
+      <div class="head">
+        <NumberBox :number="2" />
+        <div class="head-text">
+          <div class="heading-3">Choose payment method</div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="heading-4">Instant payment methods</div>
+
+        <div class="card-list">
+          <Card title="Überweisung">
+            <div class="logo-card">
+              <img src="@/assets/images/fastpay.png" />
+            </div>
+          </Card>
+          <Card title="Ideal">
+            <div class="logo-card">
+              <img src="@/assets/images/ideal.png" />
+            </div>
+          </Card>
+          <Card title="Giropay">
+            <div class="logo-card">
+              <img src="@/assets/images/giropay.png" />
+            </div>
+          </Card>
+          <Card title="Webmoney">
+            <div class="logo-card">
+              <img src="@/assets/images/webmoney.png" />
+            </div>
+          </Card>
+        </div>
+        <div class="heading-4">Non-Instant payment methods</div>
+        <div class="card-list">
+          <Card title="Transfer from bank account">
+            <div class="logo-card">
+              <img src="@/assets/images/bank-transter.png" />
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -39,6 +85,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.back {
+  color: var(--blue-500);
+  font-size: var(--heading-5);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  margin-bottom: 10px;
+}
 .topup-header {
   margin-bottom: 10px;
 }
@@ -49,8 +102,8 @@ export default {
     gap: 10px;
   }
   .content {
-    margin-top: 20px;
-    .ta-input{
+    margin-top: 15px;
+    .ta-input {
       width: 420px;
     }
   }
@@ -60,53 +113,14 @@ export default {
   display: flex;
   gap: 15px;
 }
-.bank-transfer,
-.e-wallets {
-  margin: 20px 0;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-}
-.account-card-list {
-  margin: 20px 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-}
-.account-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  .line-1 {
+
+.choose-payment-method {
+  margin-top: 30px;
+  .head {
+    margin-bottom: 10px;
     display: flex;
     gap: 10px;
-    color: var(--clr-gray);
-  }
-  .line-2 {
-    font-weight: var(--fw-bold);
-  }
-}
-.logo-card {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.btn-place-order {
-  width: 340px;
-  height: 48px;
-  line-height: 48px;
-  font-weight: var(--fw-bold);
-  text-align: center;
-  font-size: var(--heading-3);
-}
-.policy-term {
-  width: 340px;
-  line-height: 20px;
-  margin-top: 10px;
-  font-size: var(--heading-5);
-  color: var(--clr-dark);
-  a {
-    color: inherit;
+    align-items: center;
   }
 }
 </style>

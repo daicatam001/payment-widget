@@ -43,3 +43,11 @@ export default {
   margin-top: 10px;
 }
 </style>
+<style>
+.card .logo-card {
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+</style>

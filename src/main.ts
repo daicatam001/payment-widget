@@ -1,6 +1,14 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import './registerServiceWorker'
-import store from './store'
+import { createApp } from "vue";
+import App from "./App.vue";
+import "./registerServiceWorker";
+import store from "./store";
 
-createApp(App).use(store).mount('#app')
+import Card from '@/components/ui/Card.vue'
+
+const app = createApp(App);
+
+app.use(store);
+
+app.component("Card", Card);
+
+app.mount("#app");

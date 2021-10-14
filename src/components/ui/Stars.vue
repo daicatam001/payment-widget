@@ -15,14 +15,14 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   props: ["star"],
   computed: {
-    startCount(): number {
+    startCount() {
       return parseInt(this.star);
     },
-    hasHalfStar(): boolean {
+    hasHalfStar() {
       return this.startCount != this.star;
     },
   },

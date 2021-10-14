@@ -139,10 +139,21 @@ main {
   font-size: var(--heading-3);
   font-weight: var(--fw-bold);
 }
+.heading-4 {
+  font-size: var(--heading-4);
+  font-weight: var(--fw-bold);
+}
 
 .sub-heading {
   font-size: var(--heading-5);
   font-weight: var(--fw-medium);
   color: var(--clr-gray);
+}
+
+.card-list {
+  margin: 15px 0;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
 }
 </style>
