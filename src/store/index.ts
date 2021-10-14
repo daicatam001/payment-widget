@@ -1,10 +1,11 @@
 import { STEP } from "@/constants";
-import { createStore } from "vuex";
+import { createLogger, createStore } from "vuex";
 import order from "./order";
 import payment from "./payment";
 
 export interface AppState {
   step: STEP;
+  balance: number;
 }
 
 export default createStore({
@@ -14,6 +15,7 @@ export default createStore({
   },
   state: {
     step: STEP.ACCOUNT,
+    balance: 0,
   },
   actions: {
     setStep({ commit }, payload: STEP): void {
@@ -29,5 +31,9 @@ export default createStore({
     step({ step }: AppState): STEP {
       return step;
     },
+    balance({ balance }: AppState): number {
+      return balance;
+    },
   },
+  plugins:[createLogger()]
 });

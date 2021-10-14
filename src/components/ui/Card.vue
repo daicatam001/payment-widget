@@ -1,6 +1,6 @@
 <template>
   <div class="card-wrapper">
-    <div class="card">
+    <div class="card" :class="{ active }">
       <div class="body">
         <slot></slot>
       </div>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  props: ["title"],
+  props: ["title", "active"],
 };
 </script>
 
@@ -32,6 +32,7 @@ export default {
   }
   &.active {
     border-width: 2px;
+    padding: 14px;
     box-shadow: var(--bs-card-active);
   }
   .body {

@@ -1,10 +1,20 @@
 export enum STEP {
-  ACCOUNT,
-  TOP_UP,
-  SUCCESS,
+  ACCOUNT = "ACCOUNT",
+  TOP_UP = "TOP_UP",
+  SUCCESS = "SUCCESS",
 }
 
 export enum PAYMENT_TYPE {
-  DIRECT,
-  TOP_UP,
+  DIRECT = "DIRECT",
+  TOP_UP = "TOP_UP",
+}
+
+export enum PAYMENT_BY {
+  FASTER_PAY = "FASTER_PAY",
+  IDEAL = "IDEAL",
+  GIRO_PAY = "GIRO_PAY",
+  WEB_MONEY = "WEB_MONEY",
+  ALIPAY = "ALIPAY",
+  WECHAT_PAY = "WECHAT_PAY",
+  PAYPAL = "PAYPAL",
 }

@@ -25,7 +25,7 @@ import Account from "./components/Account.vue";
 import TopUp from "./components/TopUp.vue";
 import Scan from "./components/Scan.vue";
 import Success from "./components/Success.vue";
-import {STEP} from "@/constants";
+import { STEP } from "@/constants";
 export default {
   components: {
     Header,
@@ -59,12 +59,17 @@ export default {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: var(--ff);
+}
+
+button {
+  cursor: pointer;
 }
 
 body {
   min-height: 100%;
   padding: 30px 0;
-  font-family: var(--ff);
+
   font-size: var(--fs-base);
 }
 
@@ -81,6 +86,7 @@ body {
   --clr-gray: #455a64;
   --clr-accent: #2af5d6;
   --clr-accent-light: #5fffe6;
+  --clr-accent-lighter: #2af5d6;
 
   --border-clr: #f2f7ff;
   --bs-frame: 0px 0px 24px rgba(8, 21, 30, 0.2);
@@ -129,8 +135,12 @@ main {
   outline: 0;
   border: 1px solid var(--clr-accent);
   border-radius: var(--radius-base);
-  &:hover {
+  &:not(:disabled):hover {
     background-color: var(--clr-accent-light);
+  }
+  &:disabled {
+    background-color: var(--clr-accent-lighter);
+    color: var(--clr-gray);
   }
 }
 .order-wrapper {
