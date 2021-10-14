@@ -4,9 +4,9 @@
       <img src="@/assets/images/chevron-back.svg" />
       <span> Choose another payment method</span>
     </div>
-    <div class="heading-1 topup-header">Top up My FasterPay Account</div>
+    <div class="heading-1">Top up My FasterPay Account</div>
     <div class="choose-top-up-amount">
-      <div class="head">
+      <div class="head-num">
         <NumberBox :number="1" />
         <div class="head-text">
           <div class="heading-3">Choose top up amount</div>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="choose-payment-method">
-      <div class="head">
+      <div class="head-num">
         <NumberBox :number="2" />
         <div class="head-text">
           <div class="heading-3">Choose payment method</div>
@@ -96,31 +96,24 @@ export default {
   margin-bottom: 10px;
 }
 
-.choose-top-up-amount {
-  .head {
-    display: flex;
-    gap: 10px;
-  }
-  .content {
-    margin-top: 15px;
-    .ta-input {
-      width: 420px;
-    }
-  }
+.head-num {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
 }
+
+.ta-input {
+  width: 420px;
+}
+
 .badge-list {
-  margin-top: 10px;
+  margin: 10px 0;
   display: flex;
   gap: 15px;
 }
 
-.choose-payment-method {
-  margin-top: 30px;
-  .head {
-    margin-bottom: 10px;
-    display: flex;
-    gap: 10px;
+.choose-payment-method .head-num{
     align-items: center;
-  }
+    margin-top: 30px;
 }
 </style>

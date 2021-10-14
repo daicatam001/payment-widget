@@ -5,6 +5,7 @@
       <PayTo />
       <Line />
       <TopUp />
+      <Line />
       <Account />
     </div>
     <div class="order-wrapper">
@@ -130,6 +131,7 @@ main {
 .heading-1 {
   font-size: var(--heading-1);
   font-weight: var(--fw-bold);
+  margin-bottom: 10px;
 }
 .heading-2 {
   font-size: var(--heading-2);
