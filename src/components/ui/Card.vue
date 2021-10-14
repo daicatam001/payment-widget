@@ -21,6 +21,7 @@ export default {
   border: 1px solid var(--border-clr);
   box-shadow: var(--bs-card);
   border-radius: var(--radius-base);
+  cursor: pointer;
   height: 72px;
   display: flex;
   justify-content: center;

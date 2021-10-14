@@ -23,11 +23,7 @@
 </template>
 
 <script>
-import Line from "@/components/ui/Line.vue";
 export default {
-  components: {
-    Line,
-  },
 };
 </script>
 

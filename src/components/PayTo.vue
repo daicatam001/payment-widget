@@ -18,13 +18,7 @@
 </template>
 
 <script>
-import State from "@/components/ui/State.vue";
-import Stars from "@/components/ui/Stars.vue";
 export default {
-  components: {
-    State,
-    Stars,
-  },
 };
 </script>
 

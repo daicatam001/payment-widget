@@ -72,15 +72,7 @@
 </template>
 
 <script>
-import NumberBox from "@/components/ui/NumberBox.vue";
-import Input from "@/components/ui/Input.vue";
-import AmountBadge from "./ui/AmountBadge.vue";
 export default {
-  components: {
-    NumberBox,
-    Input,
-    AmountBadge,
-  },
 };
 </script>
 
