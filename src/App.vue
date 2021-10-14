@@ -73,6 +73,7 @@ body {
   padding: 30px 0;
   min-width: 950px;
   font-size: var(--fs-base);
+  overflow-y:overlay
 }
 
 :root {
