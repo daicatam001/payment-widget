@@ -19,7 +19,7 @@ Check out live demo here -> [demo][demo]
 
 ## Chanllenges
 
- - The biggest challenge of this test was to complete it in time.  It's working days so there're not much time left for me to do the task.
+ - The biggest challenge for me was to complete it on time.  It's working days so there's not much time left for me to do the task.
  - The second challenge was understanding the flow those pages, I should ask again about it so I took me a lot of time to organize data and it's not done yet
  
 
