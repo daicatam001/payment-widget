@@ -1,4 +1,3 @@
-import { STEP } from "@/constants";
 
 export interface OrderState {
   orderNumber: string;
@@ -42,7 +41,7 @@ export default {
       return orderAmount * tax;
     },
    
-    totalOrderAmount(_, { taxAmount, orderAmount, extraAmount, topUpFees, balance }) {
+    totalOrderAmount(_, { taxAmount, orderAmount}) {
       return taxAmount + orderAmount;
     },
     totalTopUpAmount(state,getters,rootState,rootGetters){

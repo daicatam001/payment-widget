@@ -11,7 +11,7 @@
         <State />
       </div>
       <div class="line-3">
-          <Stars :star="4.6"/>
+          <Stars :star="4"/>
       </div>
     </div>
   </div>

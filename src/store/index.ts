@@ -1,5 +1,5 @@
 import { STEP } from "@/constants";
-import { createLogger, createStore } from "vuex";
+import { createStore } from "vuex";
 import order from "./order";
 import payment from "./payment";
 
