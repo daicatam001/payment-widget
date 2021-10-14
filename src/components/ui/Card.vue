@@ -43,11 +43,25 @@ export default {
   margin-top: 10px;
 }
 </style>
-<style>
+<style lang="scss">
 .card .logo-card {
   height: 100%;
   justify-content: center;
   display: flex;
   align-items: center;
+}
+.card .account-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .line-1 {
+    display: flex;
+    gap: 10px;
+    color: var(--clr-gray);
+  }
+  .line-2 {
+    font-weight: var(--fw-bold);
+  }
 }
 </style>

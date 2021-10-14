@@ -1,13 +1,13 @@
 <template>
   <div class="account">
-    <div class="title">My FasterPay Accounts</div>
-    <div class="subtitle">
+    <div class="heading-1">My FasterPay Accounts</div>
+    <div class="sub-heading">
       <img src="@/assets/images/warn.svg" />
       <span>
         Insufficient balance. To continue, load your account instead to pay
       </span>
     </div>
-    <div class="account-card-list">
+    <div class="card-list account-card-list">
       <Card>
         <div class="account-card">
           <div class="line-1">
@@ -17,8 +17,8 @@
         </div>
       </Card>
     </div>
-    <div class="title-2">Bank transfers</div>
-    <div class="bank-transfer">
+    <div class="heading-4">Bank transfers</div>
+    <div class="card-list">
       <Card title="Überweisung">
         <div class="logo-card">
           <img src="@/assets/images/fastpay.png" />
@@ -40,8 +40,8 @@
         </div>
       </Card>
     </div>
-    <div class="title-2">E-wallets</div>
-    <div class="e-wallets">
+    <div class="heading-4">E-wallets</div>
+    <div class="card-list">
       <Card title="AliPay">
         <div class="logo-card">
           <img src="@/assets/images/alipay.png" />
@@ -78,56 +78,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.title {
-  font-size: var(--heading-1);
-  font-weight: var(--fw-bold);
-  line-height: 31px;
-}
-.title-2 {
-  font-size: var(--heading-3);
-  font-weight: var(--fw-bold);
-  line-height: 22px;
-}
-.subtitle {
-  font-size: var(--heading-5);
-  font-weight: var(--fw-medium);
-  color: var(--clr-gray);
-  display: flex;
+.account .sub-heading {
   align-items: center;
+  display: flex;
   line-height: 19px;
   gap: 5px;
 }
-.bank-transfer,
-.e-wallets {
-  margin: 20px 0;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-}
+
 .account-card-list {
-  margin: 20px 0;
-  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
 }
-.account-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  .line-1 {
-    display: flex;
-    gap: 10px;
-    color: var(--clr-gray);
-  }
-  .line-2 {
-    font-weight: var(--fw-bold);
-  }
-}
-.logo-card {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
+
 .btn-place-order {
   width: 340px;
   height: 48px;
