@@ -1,7 +1,6 @@
 <template>
-{{isEmpty}}
   <div class="ta-input" :class="{ 'is-empty': isEmpty }">
-    <input ref="input" type="number" :value="value" />
+    <input ref="input" type="number" :value="value" @input="handleInput" />
     <label> {{ label }}</label>
     <span class="suffix" v-if="suffix">{{ suffix }}</span>
   </div>
@@ -12,7 +11,13 @@ export default {
   props: ["label", "suffix", "value"],
   computed: {
     isEmpty() {
-      return this.$refs.input && !!this.$refs.input.value.trim();
+      return !this.value || !this.value.toString();
+    },
+  },
+  methods: {
+    handleInput(event) {
+      const value = event.target.value;
+      this.$emit("onInput", value.length ? +value : null);
     },
   },
 };
@@ -40,7 +45,13 @@ input {
   line-height: 30px;
   padding-right: 50px;
 }
-input:focus ~ label {
+
+.is-empty label {
+  font-size: 16px;
+  transform: translateY(-50%);
+}
+
+.ta-input input:focus ~ label {
   font-size: 12px;
   transform: translateY(calc(-50% - 14px));
 }
@@ -76,10 +87,5 @@ label {
   top: 50%;
   transform: translateY(-50%);
   right: 16px;
-}
-
-.ta-input.is-empty label {
-  font-size: 16px;
-  transform: translateY(-50%);
 }
 </style>

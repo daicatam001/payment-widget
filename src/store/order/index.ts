@@ -1,4 +1,4 @@
-import { AppState } from "..";
+import { STEP } from "@/constants";
 
 export interface OrderState {
   orderNumber: string;
@@ -15,9 +15,12 @@ export default {
     productName: "500 G-Coins golden Package",
     orderAmount: 45,
     tax: 0,
+    topUpFees: 3,
     currency: "EUR",
+    finalOrderAmount: 0
   },
-  actions: {},
+  actions: {
+  },
   mutations: {},
   getters: {
     orderNumber({ orderNumber }: OrderState) {
@@ -38,8 +41,22 @@ export default {
     taxAmount({ orderAmount, tax }: OrderState) {
       return orderAmount * tax;
     },
-    totalOrderAmount(_, { taxAmount, orderAmount }) {
+   
+    totalOrderAmount(_, { taxAmount, orderAmount, extraAmount, topUpFees, balance }) {
       return taxAmount + orderAmount;
     },
+    totalTopUpAmount(state,getters,rootState,rootGetters){
+      return getters.orderAmount + getters.extraAmount - getters.topUpFees + rootGetters.balance
+    },
+    topUpFees({ topUpFees }) {
+      return topUpFees
+    },
+    extraAmount(state, { orderAmount }, rootState, rootGetters) {
+      const topUpAmount = rootGetters['payment/topUpAmount']
+      if (topUpAmount && topUpAmount - orderAmount > 0) {
+        return topUpAmount - orderAmount
+      }
+      return 0
+    }
   },
 };

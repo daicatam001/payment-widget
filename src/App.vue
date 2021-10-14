@@ -65,14 +65,14 @@ export default {
   font-family: var(--ff);
 }
 
-button {
+button:not(:disabled) {
   cursor: pointer;
 }
 
 body {
   min-height: 100%;
   padding: 30px 0;
-
+  min-width: 950px;
   font-size: var(--fs-base);
 }
 

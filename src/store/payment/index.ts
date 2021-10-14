@@ -35,6 +35,12 @@ export default {
     ) {
       commit("setPaymentBy", payload);
     },
+    setTopUpAmount(
+      { commit }: ActionContext<PaymentState, AppState>,
+      payload: number
+    ) {
+      commit("setTopUpAmount", payload);
+    },
   },
   mutations: {
     setPaymentType(state: PaymentState, payload: PAYMENT_TYPE) {
@@ -42,6 +48,9 @@ export default {
     },
     setPaymentBy(state: PaymentState, payload: PAYMENT_BY | null) {
       state.paymentBy = payload;
+    },
+    setTopUpAmount(state: PaymentState, payload: number) {
+      state.topUpAmount = payload;
     },
   },
   getters: {

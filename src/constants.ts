@@ -17,4 +17,5 @@ export enum PAYMENT_BY {
   ALIPAY = "ALIPAY",
   WECHAT_PAY = "WECHAT_PAY",
   PAYPAL = "PAYPAL",
+  BANK = "BANK"
 }

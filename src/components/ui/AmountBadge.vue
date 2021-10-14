@@ -18,6 +18,7 @@ export default {
   min-width: 92px;
   text-align: center;
   height: 43px;
+  max-width: 43px;
   line-height: 43px;
   background-color: var(--clr-light);
   border: 1px solid #c8d4ea;
