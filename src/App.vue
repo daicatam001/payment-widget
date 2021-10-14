@@ -4,11 +4,9 @@
     <div class="payment-method">
       <PayTo />
       <Line />
-      <Success />
-      <Line />
-      <TopUp />
-      <Line />
-      <Account />
+      <Account v-if="step === STEP.ACCOUNT" />
+      <TopUp v-else-if="step === STEP.TOP_UP" />
+      <Success v-else-if="step === STEP.SUCCESS" />
     </div>
     <div class="order-wrapper">
       <Order />
@@ -27,6 +25,7 @@ import Account from "./components/Account.vue";
 import TopUp from "./components/TopUp.vue";
 import Scan from "./components/Scan.vue";
 import Success from "./components/Success.vue";
+import {STEP} from "@/constants";
 export default {
   components: {
     Header,
@@ -37,6 +36,16 @@ export default {
     TopUp,
     Scan,
     Success,
+  },
+  computed: {
+    step() {
+      return this.$store.getters.step;
+    },
+  },
+  data() {
+    return {
+      STEP: STEP,
+    };
   },
 };
 </script>

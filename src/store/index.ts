@@ -1,12 +1,33 @@
-import { createStore } from 'vuex'
+import { STEP } from "@/constants";
+import { createStore } from "vuex";
+import order from "./order";
+import payment from "./payment";
+
+export interface AppState {
+  step: STEP;
+}
 
 export default createStore({
-  state: {
+  modules: {
+    order,
+    payment,
   },
-  mutations: {
+  state: {
+    step: STEP.ACCOUNT,
   },
   actions: {
+    setStep({ commit }, payload: STEP): void {
+      commit("setStep", payload);
+    },
   },
-  modules: {
-  }
-})
+  mutations: {
+    setStep(state: AppState, payload: STEP): void {
+      state.step = payload;
+    },
+  },
+  getters: {
+    step({ step }: AppState): STEP {
+      return step;
+    },
+  },
+});

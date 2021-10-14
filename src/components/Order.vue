@@ -1,29 +1,49 @@
 <template>
   <div class="order">
-    <div class="order-name">Order FP1763415-9</div>
+    <div class="order-name">Order {{orderNumber}}</div>
     <Line />
-    <div class="product-name">500 G-Coins golden Package</div>
+    <div class="product-name">{{productName}}</div>
     <Line />
     <ul>
       <li>
         <div class="label">Amount</div>
-        <div class="price">45.00 EUR</div>
+        <div class="price">{{$filters.toCurrency(orderAmount)}} {{currency}}</div>
       </li>
       <li>
         <div class="label">Taxes</div>
-        <div class="price">0.00 EUR</div>
+        <div class="price">{{$filters.toCurrency(taxAmount)}} {{currency}}</div>
       </li>
     </ul>
     <Line />
     <div class="total">
       <div class="label">Total amount</div>
-      <div class="price">45.00 EUR</div>
+      <div class="price">{{$filters.toCurrency(totalOrderAmount)}} {{currency}}</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  computed: {
+    orderNumber() {
+      return this.$store.getters["order/orderNumber"];
+    },
+    productName() {
+      return this.$store.getters["order/productName"];
+    },
+    orderAmount() {
+      return this.$store.getters["order/orderAmount"];
+    },
+    taxAmount(){
+      return this.$store.getters["order/taxAmount"];
+    },
+    totalOrderAmount(){
+       return this.$store.getters["order/totalOrderAmount"];
+    },
+    currency(){
+       return this.$store.getters["order/currency"];
+    }
+  },
 };
 </script>
 
